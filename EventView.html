@@ -33,7 +33,10 @@
 
       <div class="mt-3 col-xs-1" align="center">
           <img id="pic" src="assets/1.jpg" height="500" width="1000" >
-
+          <p id="Title"> Title </p>
+          <p id="Date"> Date </p>
+          <p id="Location"> Location </p>
+          <p id="Location"> Points </p>
       </div>
       <div class="mt-3 col-xs-1" align="center">
           <script>
@@ -42,6 +45,18 @@
                   console.log("MESSGE + " + num );
                   document.getElementById("pic").src = "assets/" + num +".jpg";
                   document.getElementById("detBut").href = "EventDetailView.html?a=" + num;
+              }
+              function LoadEvent() {
+                  const urlParams = new URLSearchParams(window.location.search);
+                  var myParam = urlParams.get('a');
+                  document.getElementById("pic").src = "assets/" + myParam +".jpg";
+                  console.log(myParam)
+                  var titles = ["Gorgon City","Birmingham Design","Marc Kinechen", "KIKK Festival","Paddington Covers","Comedy Fest"];
+                  var dates = ["Nov 2","Nov 30", "Dec 14", "Nov 9", "July 12", "April 26"];
+                  var locations = ["Spin Nightclub", "Birmingham London", "Spin Nightclub", "Namur Belgium", "Norfolk Virginia", "San Diego"];
+                  document.getElementById("Title").innerHTML = titles[myParam];
+                  document.getElementById("Date").innerHTML = dates[myParam];
+                  document.getElementById("Location").innerHTML = locations[myParam];
               }
               </script>
           <button type="button" class="btn btn-secondary" onclick="NextEvent()" > Next Match</button>
