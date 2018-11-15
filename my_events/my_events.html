@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<style>
+div.overflow {
+    overflow: scroll;
+}
+</style>
+
 <html lang="en">
 
   <head>
@@ -21,35 +27,6 @@
 
   <body>
 
-    <!-- Navigation
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    -->
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Rad Events</a>
@@ -60,13 +37,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="./bootstrap_home/home.html">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="../bootstrap_home/home.html">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="Calendar.html">My Events <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="my_events.html">My Events <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                      <a class="nav-link" href="index.html">Logout <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="../index.html">Logout <span class="sr-only">(current)</span></a>
                       <!-- <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a> -->
                 </li>
             <li class="nav-item">
@@ -77,92 +54,100 @@
     </nav>
 
     <!-- Page Content -->
+
     <div class="container">
+      <!-- Page Heading -->
+      <h1 class="my-4 text-center">
+        My Events
+      </h1>
 
       <div class="row">
 
         <div class="col-lg-3">
-          <h1 class="my-4">Shop Name</h1>
+          <h1 class="my-4">Month:</h1>
           <div class="list-group">
-            <a href="#" class="list-group-item active">Category 1</a>
-            <a href="#" class="list-group-item">Category 2</a>
-            <a href="#" class="list-group-item">Category 3</a>
+            <a href="#" class="list-group-item active">November</a>
+            <a href="#" class="list-group-item">December</a>
+            <a href="#" class="list-group-item">January</a>
           </div>
         </div>
 
-      <!-- Page Heading -->
-      <h1 class="my-4">Page Heading
-        <small>Secondary Text</small>
-      </h1>
+        <!-- /.col-lg-3 -->
 
-      <!-- Project One -->
-      <div class="row">
-        <div class="col-md-7">
-          <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
-          </a>
-        </div>
-        <div class="col-md-5">
-          <h3>Project One</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
-          <a class="btn btn-primary" href="#">View Project</a>
-        </div>
-      </div>
-      <!-- /.row -->
+          <div class="col-lg-9 overflow">
 
-      <hr>
+            <!-- Project One -->
+            <div class="row">
+              <div class="col-md-7">
+                <a href="#">
+                  <img class="img-fluid rounded mb-3 mb-md-0" src="../assets/0.jpg" alt="">
+                </a>
+              </div>
+              <div class="col-md-5">
+                <h3>Gorgon City</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
+                <a class="btn btn-primary" href="#">View Project</a>
+              </div>
+            </div>
+            <!-- /.row -->
 
-      <!-- Project Two -->
-      <div class="row">
-        <div class="col-md-7">
-          <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
-          </a>
-        </div>
-        <div class="col-md-5">
-          <h3>Project Two</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
-          <a class="btn btn-primary" href="#">View Project</a>
-        </div>
-      </div>
-      <!-- /.row -->
+            <hr>
 
-      <hr>
+            <!-- Project Two -->
+            <div class="row">
+              <div class="col-md-7">
+                <a href="#">
+                  <img class="img-fluid rounded mb-3 mb-md-0" src="../assets/2.jpg" alt="">
+                </a>
+              </div>
+              <div class="col-md-5">
+                <h3>Project Two</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
+                <a class="btn btn-primary" href="#">View Project</a>
+              </div>
+            </div>
+            <!-- /.row -->
 
-      <!-- Project Three -->
-      <div class="row">
-        <div class="col-md-7">
-          <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
-          </a>
-        </div>
-        <div class="col-md-5">
-          <h3>Project Three</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!</p>
-          <a class="btn btn-primary" href="#">View Project</a>
-        </div>
-      </div>
-      <!-- /.row -->
+            <hr>
 
-      <hr>
+            <!-- Project Three -->
+            <div class="row">
+              <div class="col-md-7">
+                <a href="#">
+                  <img class="img-fluid rounded mb-3 mb-md-0" src="../assets/3.jpg" alt="">
+                </a>
+              </div>
+              <div class="col-md-5">
+                <h3>Project Three</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!</p>
+                <a class="btn btn-primary" href="#">View Project</a>
+              </div>
+            </div>
+            <!-- /.row -->
 
-      <!-- Project Four -->
-      <div class="row">
+            <hr>
 
-        <div class="col-md-7">
-          <a href="#">
-            <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
-          </a>
-        </div>
-        <div class="col-md-5">
-          <h3>Project Four</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?</p>
-          <a class="btn btn-primary" href="#">View Project</a>
-        </div>
-      </div>
-      <!-- /.row -->
+            <!-- Project Four -->
+            <div class="row">
 
-      <hr>
+              <div class="col-md-7">
+                <a href="#">
+                  <img class="img-fluid rounded mb-3 mb-md-0" src="../assets/4.jpg" alt="">
+                </a>
+              </div>
+              <div class="col-md-5">
+                <h3>Project Four</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?</p>
+                <a class="btn btn-primary" href="#">View Project</a>
+              </div>
+            </div>
+            <!-- /.row -->
+
+            <hr>
+
+            <!-- /.card -->
+
+
 
       <!-- Pagination -->
       <ul class="pagination justify-content-center">
