@@ -32,30 +32,33 @@
 
 
       <div class="mt-3 col-xs-1" align="center">
-          <img id="pic" src="assets/1.jpg" height="500" width="1000" >
+          <img id="pic" src="assets/1.jpg" style="object-fit: contain;" height="500" width="1000" >
           <p id="Title"> Title </p>
           <p id="Date"> Date </p>
           <p id="Location"> Location </p>
-          <p id="Location"> Points </p>
+          <p id="Points"> Points </p>
       </div>
       <div class="mt-3 col-xs-1" align="center">
           <script>
               var currentIndex = 0;
               function NextEvent() {
                   currentIndex++;
-                  if(currentIndex > 11)
+                  if(currentIndex > 9)
                   {
-                      currentIndex = 1;
+                      currentIndex = 0;
                   }
                   document.getElementById("pic").src = "assets/image" + currentIndex +".jpg";
                 //   document.getElementById("detBut").href = "EventDetailView.html?a=" + num;
                   var titles = ["Oceanfront Yoga","Quatuor Modigliani","Filera","Half Marathon", "D&D Weekend","FNGRS CRSSD", "Marvel Dice Masters", "OMFG","NORA EN PURE", "Munchkin Game"];
                   var eventTypes = ["Active","Cultural", "Cultural", "Active", "Gaming","Nightlife","Gaming","Nightlife", "Nightlife", "Gaming"]
                   var dates = ["Nov 20","Nov 16","Nov 15", "April 28", "Nov 17","Nov 21", "Nov 18", "Dec 29", "Nov 18", "Nov 16"];
+                  var points = ["25", "20", "50","25","15","10","15","10","20","35","50","40"];
                   var locations = ["La Jolla Shores","RIMAC Arena", "Conrad Prebys Music Theater", "La Jolla Shores", "Crossroads Apartments", "Padres Stadium", "San Diego", "Qualcom Stadium", "Market St", "Price Center"];
                   document.getElementById("Title").innerHTML = titles[currentIndex];
                   document.getElementById("Date").innerHTML = dates[currentIndex];
                   document.getElementById("Location").innerHTML = locations[currentIndex];
+                  document.getElementById("Points").innerHTML = points[currentIndex] + " Points";
+
               }
               function LoadEvent() {
                 //   const urlParams = new URLSearchParams(window.location.search);
@@ -66,20 +69,26 @@
                   var titles = ["Oceanfront Yoga","Quatuor Modigliani","Filera","Half Marathon", "D&D Weekend","FNGRS CRSSD", "Marvel Dice Masters", "OMFG","NORA EN PURE", "Munchkin Game"];
                   var eventTypes = ["Active","Cultural", "Cultural", "Active", "Gaming","Nightlife","Gaming","Nightlife", "Nightlife", "Gaming"]
                   var dates = ["Nov 20","Nov 16","Nov 15", "April 28", "Nov 17","Nov 21", "Nov 18", "Dec 29", "Nov 18", "Nov 16"];
+                  var points = ["25", "20", "50","25","15","10","15","10","20","35","50","40"];
                   var locations = ["La Jolla Shores","RIMAC Arena", "Conrad Prebys Music Theater", "La Jolla Shores", "Crossroads Apartments", "Padres Stadium", "San Diego", "Qualcom Stadium", "Market St", "Price Center"];
                   document.getElementById("Title").innerHTML = titles[currentIndex];
                   document.getElementById("Date").innerHTML = dates[currentIndex];
                   document.getElementById("Location").innerHTML = locations[currentIndex];
+                  document.getElementById("Points").innerHTML = points[currentIndex] + " Points";
+
+              }
+              function GoToPage()
+              {
+                window.location.href="Calendar.html";
               }
               </script>
 
-          <button type="button" class="btn btn-secondary" onclick="NextEvent()" > Next Match</button>
-          <a class="btn btn-success" id="detBut" role="button">Add To 'My Events'</a>
-
+          <button type="button"style="width:100px;" class="btn btn-danger" onclick="NextEvent()" > No</button>
+          <button type="button"style="width:100px;" class="btn btn-success" onclick="GoToPage()" > Yes</button>
       </div>
       <div class="mt-2 col-xs-1" align="center">
           <a class="btn btn-primary" href="selection_page/Selection.html" role="button">Redo Filtering</a>
           <br>
-          <br>
+          <br>              
       </div>
     </body>
