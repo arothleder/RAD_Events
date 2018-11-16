@@ -54,6 +54,11 @@
       </div>
       <div class="mt-3 col-xs-1" align="center">
           <script>
+            let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+
+            localStorage.setItem('items', JSON.stringify(itemsArray));
+            const data = JSON.parse(localStorage.getItem('items'));
+
               var currentIndex = 0;
               function NextEvent() {
                   currentIndex++;
@@ -92,6 +97,9 @@
               }
               function GoToPage()
               {
+                  itemsArray.push(currentIndex);
+                  localStorage.setItem('items', JSON.stringify(itemsArray));
+
                 window.location.href="./my_events/my_events.html";
               }
               </script>
